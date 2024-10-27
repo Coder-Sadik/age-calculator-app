@@ -4,11 +4,12 @@
 		<!-- meta information -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
 
 		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -28,14 +29,74 @@
 		<title>Frontend Mentor | Age calculator app</title>
 	</head>
 	<body
-		class="bg-OffWhiteflex justify-center items-center min-h-screen"
+		class="bg-OffWhite flex justify-center items-center min-h-screen font-Poppins"
 	>
-		<main class="bg-White">
-			
+		<!-- Main Section -->
+		<main
+			class="bg-White flex flex-col justify-center rounded-3xl rounded-br-[160px] p-12 space-y-12"
+		>
+			<!-- Input Section -->
+			<form class="flex gap-7 mr-40">
+				<!-- input day -->
+				<label
+					for="input-day"
+					class="flex flex-col font-bold text-SmokeyGrey uppercase max-w-[150px] tracking-[.20rem]"
+				>
+					Day
+					<input
+						type="text"
+						name="day"
+						id="input-day"
+						placeholder="DD"
+						class="text-[32px] text-OffBlack border-2 border-LightGrey rounded-lg p-2 px-4 outline-Purple cursor-pointer caret-Purple mt-1"
+					/>
+				</label>
+				<label
+					for="input-month"
+					class="flex flex-col font-bold text-SmokeyGrey uppercase max-w-[150px] tracking-[.20rem]"
+				>
+					Month
+					<input
+						type="text"
+						name="month"
+						id="input-month"
+						placeholder="MM"
+						class="text-[32px] border-2 border-LightGrey rounded-lg p-2 px-4 outline-Purple cursor-pointer caret-Purple mt-1"
+					/>
+				</label>
+				<label
+					for="input-year"
+					class="flex flex-col font-bold text-SmokeyGrey uppercase max-w-[150px] tracking-[.20rem]"
+				>
+					year
+					<input
+						type="text"
+						name="year"
+						id="input-year"
+						placeholder="YYYY"
+						class="text-[32px] border-2 border-LightGrey rounded-lg p-2 px-4 outline-Purple cursor-pointer caret-Purple mt-1"
+					/>
+				</label>
+			</form>
+
+			<!-- button -->
+			<div class="relative">
+				<hr class="bg-LightGrey h-[2px] w-full pr-[190px]" />
+				<button
+					class="bg-Purple rounded-full p-5 cursor-pointer hover:bg-OffBlack ease-in duration-150 absolute right-0 top-[-40px]"
+				>
+					<img src="assets/images/icon-arrow.svg" alt="icon-arrow" />
+				</button>
+			</div>
+
+			<!-- Result Section -->
+			<div class="text-8xl font-bold italic text-OffBlack">
+				<p><span id="output-year" class="text-Purple">--</span> years</p>
+				<p><span id="output-month" class="text-Purple">--</span> months</p>
+				<p><span id="output-day" class="text-Purple">--</span> days</p>
+			</div>
 		</main>
 
-
-		<!-- Font size (inputs): 32px -->
 		<script src="assets/js/script.js"></script>
 	</body>
 </html>
